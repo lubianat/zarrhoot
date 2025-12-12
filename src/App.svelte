@@ -84,3 +84,11 @@
     </div>
   {/if}
 </main>
+
+<footer style="margin-top: 2rem; color: #666; font-size: 0.9rem; opacity: 0.8;">
+  Open Source. <a
+    href="https://github.com/lubianat/zarrhoot"
+    target="_blank"
+    style="color: inherit;">View on GitHub</a
+  >
+</footer>
