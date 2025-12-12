@@ -67,7 +67,7 @@ questions:
   - question: "What is required for an RFC to be considered 'Adopted'?"
     answers:
       - "One released implementation"
-      - "Sufficient implemention to be considered as active ="
+      - "Sufficient implemention to be considered as active"
       - "Editor approval only"
       - "100 GitHub stars"
     time_limit: 20

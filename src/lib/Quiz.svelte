@@ -37,6 +37,38 @@
     setTimeout(next, 1500);
   }
 
+  let copied = false;
+
+  async function shareResult() {
+    const text = `I've scored ${score}/${questions.length} in the '${title}' in Zarrhoot!`;
+    const url = window.location.href;
+    const shareData = {
+      title: "ZarrHoot Quiz Result",
+      text: text,
+      url: url,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        // User cancelled or share failed, fallback to clipboard if not a cancellation
+        if (err.name !== "AbortError") {
+          copyToClipboard(`${text} Try it at: ${url}`);
+        }
+      }
+    } else {
+      copyToClipboard(`${text} Try it at: ${url}`);
+    }
+  }
+
+  function copyToClipboard(content) {
+    navigator.clipboard.writeText(content).then(() => {
+      copied = true;
+      setTimeout(() => (copied = false), 2000);
+    });
+  }
+
   function next() {
     selected = null;
     if (index < questions.length - 1) {
@@ -93,6 +125,36 @@
     <p class="subtitle">Quiz Finished!</p>
     <p class="subtitle">You scored {score} out of {questions.length}</p>
 
-    <button class="btn-control" on:click={onBack}>Back to Menu</button>
+    <div
+      style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;"
+    >
+      <button class="btn-control" on:click={onBack}>Back to Menu</button>
+      <button
+        class="btn-control"
+        style="background-color: #4CAF50; display: flex; align-items: center; gap: 8px;"
+        on:click={shareResult}
+      >
+        {#if !copied}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+        {/if}
+        {copied ? "Copied!" : "Share Result"}
+      </button>
+    </div>
   {/if}
 </div>
