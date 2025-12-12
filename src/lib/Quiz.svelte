@@ -13,6 +13,7 @@
   let timer;
 
   $: current = questions[index];
+  $: correctIndex = current ? parseInt(current.correct_answer) - 1 : -1;
 
   function startTimer() {
     timeLeft = current.time_limit || 20;
