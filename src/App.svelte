@@ -13,7 +13,7 @@
     try {
       const loadedQuizzes = await Promise.all(
         QUIZ_FILES.map(async (file) => {
-          const response = await fetch("/" + file);
+          const response = await fetch(import.meta.env.BASE_URL + file);
           const text = await response.text();
           return yaml.load(text);
         }),
