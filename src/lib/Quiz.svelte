@@ -34,7 +34,7 @@
     // Check answer (1-based index in YAML)
     if (i === correctIndex) score++;
 
-    setTimeout(next, 1500);
+    setTimeout(next, 1100);
   }
 
   let copied = false;
