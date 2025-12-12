@@ -3,7 +3,7 @@
   import yaml from "js-yaml";
   import Quiz from "./lib/Quiz.svelte";
 
-  const QUIZ_FILES = ["quiz.yaml", "ngff_intro.yaml"];
+  const QUIZ_FILES = ["quiz.yaml", "ngff_intro.yaml", "rfc1_process.yaml"];
 
   let quizzes = [];
   let activeQuiz = null;

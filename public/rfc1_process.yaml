@@ -1,0 +1,92 @@
+title: "RFC-1: The RFC Process"
+description: "Understanding how changes are made in the NGFF community."
+questions:
+  - question: "What is the primary purpose of the RFC process in NGFF?"
+    answers:
+      - "To slow down development"
+      - "To structure high-level discussions and record outcomes"
+      - "To replace GitHub issues entirely"
+      - "To enforce a strict voting system"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "Which stakeholder is responsible for facilitating the RFC process?"
+    answers:
+      - "Author"
+      - "Implementer"
+      - "Editor"
+      - "Reviewer"
+    time_limit: 20
+    correct_answer: "3"
+
+  - question: "What is the first phase of the RFC process?"
+    answers:
+      - "SPEC"
+      - "RFC"
+      - "DRAFT"
+      - "FINAL"
+    time_limit: 20
+    correct_answer: "3"
+
+  - question: "How many in-progress implementations are required to move to the SPEC phase?"
+    answers:
+      - "One"
+      - "Two"
+      - "Three"
+      - "None"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "What does the 'Accept' recommendation from a Reviewer imply?"
+    answers:
+      - "The RFC needs major changes"
+      - "The Reviewer rejects the proposal"
+      - "The Reviewer joins the list of endorsements"
+      - "The RFC is immediately adopted"
+    time_limit: 20
+    correct_answer: "3"
+
+  - question: "Who proposes an idea for the RFC process?"
+    answers:
+      - "Editors"
+      - "Authors"
+      - "Reviewers"
+      - "Endorsers"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "What happens if there is a unanimous 'Reject' recommendation?"
+    answers:
+      - "The Editors MUST close the RFC"
+      - "The Editors SHOULD close the RFC"
+      - "The Authors can ignore it"
+      - "The RFC is automatically adopted"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "What is required for an RFC to be considered 'Adopted'?"
+    answers:
+      - "One released implementation"
+      - "Two released implementations"
+      - "Editor approval only"
+      - "100 GitHub stars"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "Can RFCs be edited after adoption?"
+    answers:
+      - "Never"
+      - "Yes, for clarification, deprecation, or extension"
+      - "Yes, for completely rewriting the proposal"
+      - "Only by the original author"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "Where should the RFC document be placed in the repository?"
+    answers:
+      - "root directory"
+      - "docs/ subdirectory"
+      - "rfc/ subdirectory"
+      - "specs/ subdirectory"
+    time_limit: 20
+    correct_answer: "3"
