@@ -1,0 +1,29 @@
+title: "Intro to NGFF & OME-Zarr"
+description: "Basics of Next-Generation File Formats."
+questions:
+  - question: "What does the 'Zarr' part of OME-Zarr primarily describe?"
+    answers:
+      - "Metadata about pixel data"
+      - "How pixel data is laid out"
+      - "The file extension"
+      - "The compression algorithm"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "Which of the following is a benefit of OME-Zarr's chunking?"
+    answers:
+      - "It merges all files into one monolithic block"
+      - "It automatically fixes broken pixels"
+      - "Viewers can target specific chunks to load"
+      - "It increases the file size by 10x"
+    time_limit: 20
+    correct_answer: "3"
+
+  - question: "In which scenario is OME-Zarr currently described as 'less convenient'?"
+    answers:
+      - "Storing massive images on the cloud"
+      - "Sharing data across organizations"
+      - "Working with small, local files"
+      - "High content screening"
+    time_limit: 20
+    correct_answer: "3"

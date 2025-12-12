@@ -1,0 +1,29 @@
+title: "OME-Zarr v0.5 Specs"
+description: "Test your knowledge on the v0.5 specification details."
+questions:
+  - question: "OME-Zarr v0.5 is implemented using which Zarr spec version?"
+    answers:
+      - "Zarr v1"
+      - "Zarr v2"
+      - "Zarr v3"
+      - "Zarr v4"
+    time_limit: 20
+    correct_answer: "3"
+
+  - question: "In zarr.json, the OME-Zarr v0.5 version string lives at:"
+    answers:
+      - "attributes.version"
+      - "attributes.ome.version"
+      - "ome.version (top-level)"
+      - "zarr_format.version"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "In OME-Zarr v0.5 axes metadata, every axis dictionary MUST include:"
+    answers:
+      - "unit"
+      - "type"
+      - "name"
+      - "dimension_names"
+    time_limit: 20
+    correct_answer: "3"
