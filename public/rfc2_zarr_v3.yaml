@@ -1,0 +1,65 @@
+title: "RFC-2: Zarr v3 Adoption"
+description: "Learn about the adoption of Zarr v3 for OME-Zarr and its key features like sharding."
+questions:
+  - question: "What is the primary objective of RFC-2 for OME-Zarr?"
+    answers:
+      - "Adopt Zarr v3 as the underlying format"
+      - "Deprecate OME-Zarr in favor of N5"
+      - "Introduce support for DICOM images"
+      - "Revert to Zarr v1 for compatibility"
+    time_limit: 20
+    correct_answer: 1
+
+  - question: "Which Zarr v3 feature is a key motivation for its adoption in OME-Zarr?"
+    answers:
+      - "Sharding"
+      - "XML-based metadata"
+      - "Built-in video streaming"
+      - "Mandatory gzip compression"
+    time_limit: 20
+    correct_answer: 1
+
+  - question: "What benefit does sharding provide for large OME-Zarr images?"
+    answers:
+      - "Reduces the number of files/objects required"
+      - "Increases the file size for better quality"
+      - "Removes the need for metadata"
+      - "Automatically converts images to JPEG"
+    time_limit: 20
+    correct_answer: 1
+
+  - question: "In Zarr v3, where are array and group metadata (including attributes) stored?"
+    answers:
+      - "zarr.json files"
+      - ".zarray and .zgroup files"
+      - "A central SQLite database"
+      - "The file header of every chunk"
+    time_limit: 20
+    correct_answer: 1
+
+  - question: "Under which key will OME-Zarr metadata be stored in Zarr v3?"
+    answers:
+      - "ome"
+      - "bioformats"
+      - "metadata"
+      - "ngff"
+    time_limit: 20
+    correct_answer: 1
+
+  - question: "How does RFC-2 handle the coexistence of OME-Zarr 0.5 (Zarr v3) and 0.4 (Zarr v2) metadata?"
+    answers:
+      - "It is NOT RECOMMENDED, but 0.5 should be preferred"
+      - "It is strictly forbidden and will cause a crash"
+      - "It is the recommended standard practice"
+      - "Version 0.4 metadata is automatically deleted"
+    time_limit: 20
+    correct_answer: 1
+
+  - question: "Is Zarr v3 metadata backwards compatible with Zarr v2?"
+    answers:
+      - "No, they are not backwards compatible"
+      - "Yes, fully backwards compatible"
+      - "Only for 2D images"
+      - "Yes, if the file extension is changed"
+    time_limit: 20
+    correct_answer: 1
