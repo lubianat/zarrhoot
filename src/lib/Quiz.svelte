@@ -31,10 +31,9 @@
     selected = i;
 
     // Check answer (1-based index in YAML)
-    const correct = parseInt(current.correct_answer) - 1;
-    if (i === correct) score++;
+    if (i === correctIndex) score++;
 
-    setTimeout(next, 2000);
+    setTimeout(next, 1500);
   }
 
   function next() {
@@ -71,9 +70,15 @@
     <div class="answers-grid">
       {#each current.answers as answer, i}
         <button
-          class="answer-btn {selected !== null && selected !== i
+          class="answer-btn
+            {selected !== null && i === correctIndex ? 'correct' : ''}
+            {selected !== null && selected === i && i !== correctIndex
+            ? 'wrong'
+            : ''}
+            {selected !== null && i !== correctIndex && i !== selected
             ? 'dimmed'
-            : ''}"
+            : ''}
+          "
           on:click={() => select(i)}
           disabled={selected !== null}
         >

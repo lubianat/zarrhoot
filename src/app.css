@@ -137,6 +137,7 @@ button:active {
   display: flex;
   align-items: center;
   gap: 15px;
+  transition: all 0.2s;
 }
 
 .answer-btn:nth-child(1) {
@@ -158,6 +159,18 @@ button:active {
 .answer-btn.dimmed {
   opacity: 0.3;
   box-shadow: none;
+  transform: scale(0.98);
+}
+
+.answer-btn.correct {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #26890c;
+  z-index: 10;
+}
+
+.answer-btn.wrong {
+  opacity: 0.7;
+  text-decoration: line-through;
 }
 
 .shape {
