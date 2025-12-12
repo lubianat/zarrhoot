@@ -89,7 +89,8 @@
       {/each}
     </div>
   {:else}
-    <h1 class="title">Quiz Finished!</h1>
+    <h1 class="title">{title}</h1>
+    <p class="subtitle">Quiz Finished!</p>
     <p class="subtitle">You scored {score} out of {questions.length}</p>
 
     <button class="btn-control" on:click={onBack}>Back to Menu</button>
