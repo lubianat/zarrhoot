@@ -1,0 +1,92 @@
+title: "RFC-5: Coordinate Systems"
+description: "Test your knowledge on Coordinate Systems and Transformations in OME-Zarr."
+questions:
+  - question: "What is the primary goal of RFC-5 in OME-Zarr?"
+    answers:
+      - "To add support for spatial and coordinate transformations"
+      - "To define a new consensus model for the community"
+      - "To flatten the multiscales array structure"
+      - "To zip OME-Zarr files for easier sharing"
+    time_limit: 20
+    correct_answer: "1"
+
+  - question: "Which field is REQUIRED for every coordinate system in RFC-5?"
+    answers:
+      - "description"
+      - "id"
+      - "name"
+      - "version"
+    time_limit: 20
+    correct_answer: "3"
+
+  - question: "In a coordinate system's 'axes' list, what does 'discrete': true indicate?"
+    answers:
+      - "The axis allows for interpolation between values"
+      - "The axis may be indexed only by integers"
+      - "The axis represents a continuous physical dimension"
+      - "The axis is hidden from the user"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "Which of the following is NOT a valid axis type in RFC-5?"
+    answers:
+      - "space"
+      - "color"
+      - "time"
+      - "channel"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "Where should transformations between two or more images be stored?"
+    answers:
+      - "Inside the image array itself"
+      - "In a separate external XML file"
+      - "In the root 'zarr.json' only"
+      - "In the attributes of a parent zarr group"
+    time_limit: 20
+    correct_answer: "4"
+
+  - question: "What is the 'identity' transformation?"
+    answers:
+      - "Maps input coordinates to output coordinates without modification"
+      - "Inverts the axes"
+      - "Scales the image by 100%"
+      - "Removes all metadata"
+    time_limit: 20
+    correct_answer: "1"
+
+  - question: "How is an 'affine' transformation matrix stored?"
+    answers:
+      - "As a comma-separated string"
+      - "As a 2D array (JSON or Zarr array)"
+      - "As a binary blob"
+      - "It cannot be stored"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "What does the 'sequence' transformation do?"
+    answers:
+      - "Reverses the order of axes"
+      - "Generates a sequence of numbers"
+      - "Applies a list of transformations in order"
+      - "Converts the image to a video sequence"
+    time_limit: 20
+    correct_answer: "3"
+
+  - question: "What is the purpose of the 'inverseOf' transformation?"
+    answers:
+      - "To delete a transformation"
+      - "To indicate a transformation is the inverse of another"
+      - "To create a mirror image of the data"
+      - "To undo the last edit to the file"
+    time_limit: 20
+    correct_answer: "2"
+
+  - question: "Which axis type is usually considered 'continuous' (discrete: false)?"
+    answers:
+      - "channel"
+      - "coordinate"
+      - "space"
+      - "displacement"
+    time_limit: 20
+    correct_answer: "3"
