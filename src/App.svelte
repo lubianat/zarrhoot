@@ -8,7 +8,7 @@
     "ngff_intro.yaml",
     "rfc1_process.yaml",
     "rfc2_zarr_v3.yaml",
-    "rfc5_coords.yaml",
+    //  "rfc5_coords.yaml",
   ];
 
   let quizzes = [];

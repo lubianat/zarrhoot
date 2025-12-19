@@ -1,4 +1,4 @@
-title: "RFC-5: Coordinate Systems"
+title: "(in-progress) RFC-5: Coordinate Systems"
 description: "Test your knowledge on Coordinate Systems and Transformations in OME-Zarr."
 questions:
   - question: "What is the primary goal of RFC-5 in OME-Zarr?"
@@ -50,7 +50,7 @@ questions:
     answers:
       - "Maps input coordinates to output coordinates without modification"
       - "Inverts the axes"
-      - "Scales the image by 100%"
+      - "Scales the image by 1000%"
       - "Removes all metadata"
     time_limit: 20
     correct_answer: "1"
